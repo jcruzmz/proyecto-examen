@@ -1,6 +1,5 @@
 package com.thincode.ejercicio.interfaces;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 import com.thincode.ejercicio.clases.Persona;

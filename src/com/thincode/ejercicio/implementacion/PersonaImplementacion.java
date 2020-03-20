@@ -1,11 +1,10 @@
 package com.thincode.ejercicio.implementacion;
 
 import java.io.BufferedReader;
+
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -20,7 +19,8 @@ import com.thincode.ejercicio.interfaces.PersonaInterface;
 public class PersonaImplementacion implements PersonaInterface {
 	private Persona persona = null;
 	private JFrame frame;
-    private JFileChooser fc = new JFileChooser();
+	private JFileChooser fc = new JFileChooser();
+
 	public PersonaImplementacion() {
 		frame = new JFrame();
 
@@ -55,13 +55,8 @@ public class PersonaImplementacion implements PersonaInterface {
 			String ruta = archivo.getPath();
 			FileReader f = null;
 			try {
-				f = new FileReader(ruta);
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			BufferedReader b = new BufferedReader(f);
-			try {
+				f = new FileReader(ruta);			 
+				BufferedReader b = new BufferedReader(f);
 				while ((cadena = b.readLine()) != null) {
 					Pattern pat = Pattern.compile("(\\d+)\\s(([a-zA-Z]+\\s?){4})\\s(\\d+)\\s(([0-9]+\\/?){3})\\s(.*\\@(.*\\..*){1,2})");
 				    Matcher mat = pat.matcher(cadena);
@@ -74,16 +69,10 @@ public class PersonaImplementacion implements PersonaInterface {
 				    	persona.setCorreo(mat.group(7));
 						map.put(Integer.parseInt(mat.group(1)),persona);
 				    }
-				}
+				} 
+				b.close();
 				return map;
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			try {
-				b.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

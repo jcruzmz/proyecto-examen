@@ -1,6 +1,6 @@
 package com.thincode.ejercicio.main;
 
-import java.util.ArrayList;
+
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
@@ -32,7 +32,7 @@ public class Main {
 					if (listaPersona == null) {
 						System.out.println("Porfa primero carga el archivo, aun no tengo datos para trabajar.");
 					} else {
-						Iterator it = listaPersona.keySet().iterator();
+						Iterator<Integer> it = listaPersona.keySet().iterator();
 						while (it.hasNext()) {
 							Integer key = (Integer) it.next();
 							System.out.println(listaPersona.get(key).toString());
@@ -49,7 +49,7 @@ public class Main {
 					}
 					break;
 				case 4:
-					System.out.println("Adios");
+					System.out.println("Adiós");
 					aux = false;
 					break;
 				default:

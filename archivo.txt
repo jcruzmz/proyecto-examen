@@ -1,0 +1,8 @@
+1 Juan Diego Cruz Marquez 23 11/12/1996 juan.cruz@thincode.com
+2 Eduardo Villanueva Torres 25 15/01/1994 jose.villanueva@thincode.com
+3 Omar Arzate Gallardo 25 16/02/1995 omar.Arzate@thincode.com
+4 Martin Rafael Cruz Cruz 22 11/11/1997 martin.cruz@thincode.com
+5 Miguel Angel Castillo Vega 34 01/01/1989 miguel.castillo@thincode.com
+6 Daniel Alejandro Sanchez Ramirez 29 01/01/1990 daniel.sanchez@thincode.com
+7 Rene Erick Soto Ramirez 26 01/01/1990 rene.soto@thincode.com
+8 Raul Axel Mariscal 25 01/01/1995 raul.mariscal@thincode.com
